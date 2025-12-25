@@ -1,9 +1,9 @@
 "use client";
 
-import ProtectedRoute from "@/components/core/protected-route";
 import { SidebarProvider } from "@/components/ui/sidebar";
 import React from "react";
-import AppSidebar from "../ui/app-sidebar";
+import AppSidebar from "../sidebar/app-sidebar";
+import ProtectedRoute from "@/modules/auth/route-guards/protected-route";
 
 export default function DashboardLayout({
   children,

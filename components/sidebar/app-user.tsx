@@ -1,4 +1,4 @@
-import { AppSidebarProps } from "../ui/app-sidebar";
+
 import {
   SidebarMenu,
   SidebarMenuButton,
@@ -20,6 +20,7 @@ import { useState } from "react";
 import { signOut } from "@/lib/auth-client";
 import { LoaderSpinner } from "@/components/core/loader-spinner";
 import AppUserAvatar from "./app-user-avatar";
+import { AppSidebarProps } from "./app-sidebar";
 
 function AppUser({ session }: AppSidebarProps) {
   const { isMobile } = useSidebar();

@@ -2,8 +2,8 @@
 
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
-import { LoaderSpinner } from "./loader-spinner";
 import { useSession } from "@/lib/auth-client";
+import { LoaderSpinner } from "@/components/core/loader-spinner";
 
 type ProtectedRouteProps = {
   children: React.ReactNode | ((session: NonNullable<ReturnType<typeof useSession>["data"]>) => React.ReactNode);

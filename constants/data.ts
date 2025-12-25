@@ -28,3 +28,20 @@ export const APP_NAVIGATOR_ITEMS = [
         icon: LayoutDashboardIcon
     }
 ]
+
+export const MONTH_NAMES = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec"
+]
+
+export const DEFAULT_PER_PAGE = 10;

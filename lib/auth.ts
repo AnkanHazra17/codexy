@@ -13,8 +13,8 @@ export const auth = betterAuth({
     github: {
       clientId: envConfig.GITHUB_CLIENT_ID,
       clientSecret: envConfig.GITHUB_CLIENT_SECRET,
-      // Start with minimal scope - expand when you actually need repo access
-      scope: ["read:user", "user:email"],
+      // Required scopes for webhook management
+      scope: ["read:user", "user:email", "repo", "admin:repo_hook"],
     },
   },
 });

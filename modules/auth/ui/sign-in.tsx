@@ -3,7 +3,6 @@
 import { LoaderSpinner } from "@/components/core/loader-spinner";
 import { Button } from "@/components/ui/button";
 import { signIn } from "@/lib/auth-client";
-import { GitBranchPlus } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 

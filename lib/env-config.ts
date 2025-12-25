@@ -11,5 +11,6 @@ export const envConfig = {
   GITHUB_CLIENT_ID: getEnvVar("GITHUB_CLIENT_ID"),
   GITHUB_CLIENT_SECRET: getEnvVar("GITHUB_CLIENT_SECRET"),
   BETTER_AUTH_SECRET: getEnvVar("BETTER_AUTH_SECRET"),
-  BETTER_AUTH_URL: getEnvVar("BETTER_AUTH_URL", false) || process.env.NEXT_PUBLIC_APP_URL || "http://localhost:4000",
+  BETTER_AUTH_URL: getEnvVar("BETTER_AUTH_URL", false),
+  NEXT_PUBLIC_APP_BASE_URL: getEnvVar("NEXT_PUBLIC_APP_BASE_URL"),
 } as const;

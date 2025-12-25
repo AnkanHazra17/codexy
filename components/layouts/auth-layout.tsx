@@ -1,6 +1,6 @@
 import { FloatingPaths } from "@/components/core/floating-path";
-import PublicRoute from "@/components/core/public-route";
 import { Button } from "@/components/ui/button";
+import PublicRoute from "@/modules/auth/route-guards/public-route";
 import { ChevronLeftIcon } from "lucide-react";
 import Link from "next/link";
 

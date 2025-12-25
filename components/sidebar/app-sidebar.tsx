@@ -9,9 +9,9 @@ import {
   SidebarRail,
 } from "@/components/ui/sidebar";
 import { useSession } from "@/lib/auth-client";
-import AppNavigator from "../components/app-navigator";
 import Image from "next/image";
-import AppUser from "../components/app-user";
+import AppNavigator from "./app-navigator";
+import AppUser from "./app-user";
 
 export type AppSidebarProps = {
   session: NonNullable<ReturnType<typeof useSession>["data"]>;

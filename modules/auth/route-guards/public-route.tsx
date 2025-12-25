@@ -1,9 +1,9 @@
 "use client";
 
+import { LoaderSpinner } from "@/components/core/loader-spinner";
 import { useSession } from "@/lib/auth-client";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
-import { LoaderSpinner } from "./loader-spinner";
 
 type PublicRouteProps = {
   children: React.ReactNode;
