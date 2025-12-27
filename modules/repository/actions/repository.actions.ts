@@ -1,5 +1,7 @@
 "use server";
 
+import { INNGEST_EVENT } from "@/constants/data";
+import { inngest } from "@/inngest/client";
 import { auth } from "@/lib/auth";
 import prisma from "@/lib/db";
 import { createWebhook, getRepositories } from "@/modules/github/github.action";
@@ -84,7 +86,19 @@ export async function connectRepository(
 
     // TODO: Increment repository count in user's subscription
 
-    // TODO: Trigger repository indexing for RAG
+    // Trigger repository indexing for RAG
+    try {
+      await inngest.send({
+        name: INNGEST_EVENT.REPOSITORY_CONNECTED,
+        data: {
+          owner,
+          repo,
+          userId: session.user.id,
+        },
+      });
+    } catch (error) {
+      console.error("Error triggering repository indexing:", error);
+    }
 
     return webhook;
   } catch (error) {
